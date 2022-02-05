@@ -24,5 +24,8 @@ Distributed computing concepts implemented in Python.
 Monotonic writes ensure that if a process performs write w1, then w2, then all processes observe w1 before w2. Monotonic writes do not apply to operations performed
 by different processes, only writes by the same process.
 
-
+## Client server communication
+* Two different types of cipher techniques were implemented namely; 1. Substitution Cipher and 2. Transposition cipher. Both these techniques were implemented in python using socket programming where the client sent a .txt to the server and the server encrypted the .txt file data in accordance with the methods mentioned above. For this experiment, only lower-case alphabets have been considered.
+1. Substitution Cipher: In this method, the client sent a .txt file to the server with a key. This key was later used by the server to apply mathematical operations or logic (in our case cyclic addition) to retrieve the pre-fed dictionary containing all the alphabets in an increasing order of their ascii values. The key was used to encrypt the data. This updated encrypted file was stored in the server. White spaces have been considered.
+2. Transposition Cipher: In this method, the client sent a .txt file to the server. This .txt file was encrypted by the server by simply taking a transposition of the alphabets present in the file. This was done by storing each alphabet into a matrix after which, the transpose of the matrix was found and the updated .txt file was stored in the server. White spaces have not been considered and the empty space has been filled with $.
 
